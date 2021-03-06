@@ -1,10 +1,8 @@
-import React from 'react'
-
 const Header = () => {
     return (
-        <div>
-            
-        </div>
+        <header>
+            <h1>GDA Homepage</h1>
+        </header>
     )
 }
 
