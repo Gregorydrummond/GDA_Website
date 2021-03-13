@@ -1,5 +1,5 @@
 import { Nav, Navbar} from 'react-bootstrap'
-//import Logo from '../images/Logo'
+import { BsPeopleCircle } from 'react-icons/bs'
 var logo = require('../images/gameController.png')
 
 const NavBar = () => {
@@ -15,7 +15,12 @@ const NavBar = () => {
                         height="50"
                     />
                 </Navbar.Brand>
-                <Nav class="navbar-nav ml-auto">
+                <Nav className="mr-auto">
+                    <Nav.Item>
+                        <Nav.Link href="/">GDA</Nav.Link>
+                    </Nav.Item>
+                </Nav>
+                <Nav className="navbar-nav ml-auto">
                     <Nav.Item>
                         <Nav.Link href="/">Home</Nav.Link>
                     </Nav.Item>
@@ -27,6 +32,14 @@ const NavBar = () => {
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link href="/contact">Resources</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="/profile">Profile</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link href="/login">
+                            <BsPeopleCircle />
+                        </Nav.Link>
                     </Nav.Item>
                 </Nav>
             </Navbar>

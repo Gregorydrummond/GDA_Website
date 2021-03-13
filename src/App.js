@@ -5,6 +5,8 @@ import HomePage from "./components/Pages/HomePage"
 import ContactPage from "./components/Pages/ContactPage"
 import EventPage from "./components/Pages/EventPage"
 import GamePage from "./components/Pages/GamePage"
+import ProfilePage from "./components/Pages/ProfilePage"
+import LoginPage from "./components/Pages/LoginPage"
 
 
 
@@ -19,6 +21,8 @@ function App() {
             <Route path='/contact' component={ContactPage} />
             <Route path='/events' component={EventPage} />
             <Route path='/games' component={GamePage} />
+            <Route path='/profile' component={ProfilePage} />
+            <Route path='/login' component={LoginPage} />
           </Switch>
         </Router>
       </Container>
