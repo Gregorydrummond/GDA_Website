@@ -10,7 +10,13 @@
       "id": 2,
       "text": "Homework Assignment",
       "day": "March 12th, 2021",
-      "reminder": false
+      "reminder": true
+    },
+    {
+      "text": "Gym",
+      "day": "Tonight",
+      "reminder": true,
+      "id": 3
     }
   ]
 }
