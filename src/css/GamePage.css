@@ -1,0 +1,42 @@
+.search {
+    border-width: 1px;
+    margin-left: 0.25%;
+}
+
+.gameCardContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+.gameCard {
+    border: black 1px solid;
+    background-color:cornsilk;
+    width: 45%;
+    margin: 10px;
+    height: max-content;
+}
+
+.gameTitle {
+    width: 100%;
+    background-color:wheat;
+    border: black 1px solid;
+    padding: 3px 10px 3px 5px;
+    font-size: x-large;
+}
+
+.gameDescription {
+    padding-right: 5%;
+    padding-left: 1%;
+    padding-top: 5%;;
+}
+
+.gameImage {
+    float: right;
+    height: 170px;
+    width: 190px;
+    margin-bottom: 3%;
+    
+}

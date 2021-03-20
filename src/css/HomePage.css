@@ -2,6 +2,9 @@
     text-align: center;
 }
 
+.homeGameCard {
+    height: max-content;
+}
 
 .cardImage {
     height: 60%;

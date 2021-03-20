@@ -11,11 +11,6 @@ var gameCardImageEx1 = require('../../images/gameCardImageEx1.jpeg')
 var gameCardImageEx2 = require('../../images/gameCardImageEx2.jpeg')
 var placeholder = require('../../images/placeholder.png')
 
-
-
-
-
-
 const HomePage = () => {
     return (
         <div>
@@ -77,7 +72,7 @@ const HomePage = () => {
             <div className="mt-5 title">
                 <h2>Featured Games</h2>
                 <CardDeck className="pt-3">
-                    <Card border="dark" >
+                    <Card border="dark">
                         <Card.Img className="cardImage" varient="top" src={gameCardImageEx1.default} />
                         <Card.Body>
                             <Card.Title>Mario vs The World</Card.Title>
@@ -88,7 +83,7 @@ const HomePage = () => {
                         </Card.Body>
                     </Card>
 
-                    <Card >
+                    <Card>
                         <Card.Img className="cardImage" varient="top" src={gameCardImageEx2.default} />
                         <Card.Body>
                             <Card.Title>Game 2</Card.Title>
@@ -103,7 +98,7 @@ const HomePage = () => {
             <div className="mt-5 title">
                 <h2 className="mb-3 title">New Games</h2>
                 <CardDeck>
-                    <Card>
+                    <Card className="homeGameCard">
                         <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
                         <Card.Body>
                         <Card.Title>Card title</Card.Title>
@@ -113,7 +108,7 @@ const HomePage = () => {
                         <Button variant="outline-primary">Play</Button>
                         </Card.Body>
                     </Card>
-                    <Card>
+                    <Card className="homeGameCard">
                         <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
                         <Card.Body>
                         <Card.Title>Card title</Card.Title>
@@ -123,7 +118,7 @@ const HomePage = () => {
                         <Button variant="outline-primary">Play</Button>
                         </Card.Body>
                     </Card>
-                    <Card>
+                    <Card className="homeGameCard">
                         <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
                         <Card.Body>
                         <Card.Title>Card title</Card.Title>
