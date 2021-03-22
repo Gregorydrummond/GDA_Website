@@ -5,7 +5,7 @@ var placeholder = require('../../images/placeholder.png')
 
 const GamePage = () => {
     return (
-        <div>
+        <div className="gamePageBody">
             <h1 className="title">Games</h1>
             <div className="">
                 <form>
@@ -21,7 +21,7 @@ const GamePage = () => {
                     <p className="gameDescription">
                         <img className="gameImage" src={gameCardImageEx1.default} alt="Game"/>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique posuere odio ut iaculis. Vestibulum blandit ante a lacus vulputate, non efficitur nisi viverra.
-                        <Button variant="primary">Play</Button>
+                        <Button href="/gameViewPage" variant="primary">Play</Button>
                     </p>
                 </div>
                 <div className="gameCard">
