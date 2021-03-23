@@ -13,7 +13,7 @@ import "./css/App.css"
 
 function App() {
   return (
-    <div className="body">
+    <div>
       <NavBar />
         <Router>
           <Switch>
@@ -28,7 +28,6 @@ function App() {
             </Container>
           </Switch>
         </Router>
-      
     </div>
   );
 }
