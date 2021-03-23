@@ -1,12 +1,13 @@
 import { Nav, Navbar} from 'react-bootstrap'
 import { BsPeopleCircle } from 'react-icons/bs'
+import "../css/NavBar.css"
 var logo = require('../images/gameController.png')
 
 const NavBar = () => {
     console.log(logo)
     return (
         <div>
-            <Navbar bg="light" expand>
+            <Navbar bg="light" expand  className="navbar">
                 <Navbar.Brand href="/">
                     <img 
                         src={logo.default}

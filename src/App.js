@@ -7,25 +7,28 @@ import EventPage from "./components/Pages/EventPage"
 import GamePage from "./components/Pages/GamePage"
 import ProfilePage from "./components/Pages/ProfilePage"
 import LoginPage from "./components/Pages/LoginPage"
-
+import GameViewPage from "./components/Pages/GameViewPage"
+import "./css/App.css"
 
 
 function App() {
   return (
-    <div>
+    <div className="body">
       <NavBar />
-      <Container>
         <Router>
           <Switch>
-            <Route exact path='/' component={HomePage} />
+          <Route exact path='/' component={HomePage} />
             <Route path='/contact' component={ContactPage} />
+            <Route path='/gameViewPage' component={GameViewPage} />
             <Route path='/events' component={EventPage} />
-            <Route path='/games' component={GamePage} />
             <Route path='/profile' component={ProfilePage} />
             <Route path='/login' component={LoginPage} />
+            <Container>
+              <Route path='/games' component={GamePage} />
+            </Container>
           </Switch>
         </Router>
-      </Container>
+      
     </div>
   );
 }
