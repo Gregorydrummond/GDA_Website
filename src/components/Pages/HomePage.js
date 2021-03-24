@@ -9,16 +9,13 @@ var gameDev = require('../../images/gameDev.png')
 var gameDev2 = require('../../images/gameDev2.jpeg')
 var gameCardImageEx1 = require('../../images/gameCardImageEx1.jpeg')
 var gameCardImageEx2 = require('../../images/gameCardImageEx2.jpeg')
-
-
-
-
+var placeholder = require('../../images/placeholder.png')
 
 const HomePage = () => {
     return (
-        <div>
+        <Container>
             <Container className="mt-5">
-                <Carousel >
+                <Carousel className="carousel">
                     <Carousel.Item>
                         <img
                             className="d-block"
@@ -74,8 +71,8 @@ const HomePage = () => {
             </Container>
             <div className="mt-5 title">
                 <h2>Featured Games</h2>
-                <CardDeck>
-                    <Card >
+                <CardDeck className="pt-3">
+                    <Card className="featuredGameCard">
                         <Card.Img className="cardImage" varient="top" src={gameCardImageEx1.default} />
                         <Card.Body>
                             <Card.Title>Mario vs The World</Card.Title>
@@ -86,7 +83,7 @@ const HomePage = () => {
                         </Card.Body>
                     </Card>
 
-                    <Card >
+                    <Card className="featuredGameCard">
                         <Card.Img className="cardImage" varient="top" src={gameCardImageEx2.default} />
                         <Card.Body>
                             <Card.Title>Game 2</Card.Title>
@@ -98,7 +95,48 @@ const HomePage = () => {
                     </Card>
                 </CardDeck>
             </div>
-        </div>
+            <div className="mt-5 title">
+                <h2 className="mb-3 title">New Games</h2>
+                <CardDeck>
+                    <Card className="newGameCard">
+                        <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
+                        <Card.Body>
+                        <Card.Title>Game title</Card.Title>
+                        <Card.Text>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
+                        </Card.Text>
+                        <Button variant="outline-primary">Play</Button>
+                        </Card.Body>
+                    </Card>
+                    <Card className="newGameCard">
+                        <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
+                        <Card.Body>
+                        <Card.Title>Game title</Card.Title>
+                        <Card.Text>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
+                        </Card.Text>
+                        <Button variant="outline-primary">Play</Button>
+                        </Card.Body>
+                    </Card>
+                    <Card className="newGameCard">
+                        <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
+                        <Card.Body>
+                        <Card.Title>Game title</Card.Title>
+                        <Card.Text>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
+                        </Card.Text>
+                        <Button variant="outline-primary">Play</Button>
+                        </Card.Body>
+                    </Card>
+
+                </CardDeck>
+            </div>
+            <div className="allGamesButtonDiv">
+                <a href="/games">
+                    <button type="button" className="allGamesButton">All Games</button>
+                </a>
+            </div>
+        </Container>
     )
 }
 
