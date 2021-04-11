@@ -8,13 +8,14 @@ import GamePage from "./components/Pages/GamePage"
 import ProfilePage from "./components/Pages/ProfilePage"
 import LoginPage from "./components/Pages/LoginPage"
 import GameViewPage from "./components/Pages/GameViewPage"
+import UploadPage from "./components/Pages/UploadPage"
 import "./css/App.css"
 
 
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavBar/>
         <Router>
           <Switch>
           <Route exact path='/' component={HomePage} />
@@ -25,6 +26,7 @@ function App() {
             <Route path='/login' component={LoginPage} />
             <Container>
               <Route path='/games' component={GamePage} />
+              <Route path='/upload' component={UploadPage} />
             </Container>
           </Switch>
         </Router>
