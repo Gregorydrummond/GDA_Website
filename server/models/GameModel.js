@@ -4,6 +4,7 @@ const {Schema} = mongoose;
 
 const gameinfoSchema = new Schema({
     title: String,
+    gameDescription: String,
     gameFile: Object
 });
 

@@ -18,6 +18,7 @@ const Upload = () => {
     //Input State
     const [input, setInput] = useState({
         gameName: "",
+        gameDescription: ""
         //selectedFile: File
     })
 
@@ -42,6 +43,7 @@ const Upload = () => {
 
         const newGame = {
             title: input.gameName,
+            gameDescription: input.gameDescription,
             file: selectedFile
         }
 
@@ -55,6 +57,11 @@ const Upload = () => {
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Game Name</Form.Label>
                     <Form.Control type="text" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name"/>
+                </Form.Group>
+
+                <Form.Group controlId="exampleForm.ControlTextarea1">
+                    <Form.Label>Game Description</Form.Label>
+                    <Form.Control as="textarea" name="gameDescription" value={input.gameDescription} onChange={handleChange} placeholder="Tell us about your game" />
                 </Form.Group>
 
                 <div className="mb-3">

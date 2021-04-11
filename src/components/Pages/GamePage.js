@@ -8,6 +8,7 @@ var placeholder = require('../../images/placeholder.png')
 const GamePage = () => {
     const [gameInfo, setGameInfo] = useState([{
         title: '',
+        gameDescription: '',
         file: null
     }]);
 
@@ -37,15 +38,18 @@ const GamePage = () => {
             <div className="gameCardContainer">
                 {gameInfo.map(info =>
                     <div className="gameCard">
-                    <div className="gameTitle">
-                        {info.title}
-                    </div>
-                    <p className="gameDescription">
+                        <div className="gameTitle">
+                            {info.title}
+                        </div>
                         <img className="gameImage" src={gameCardImageEx1.default} alt="Game"/>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique posuere odio ut iaculis. Vestibulum blandit ante a lacus vulputate, non efficitur nisi viverra.
-                        <Button href="/gameViewPage" variant="primary">Play</Button>
-                    </p>
-                </div>
+                        <p className="gameDescription">
+                            
+                            {info.gameDescription}
+                            <div>
+                                <Button className="playButton" href="/gameViewPage" variant="primary">Play</Button>
+                            </div>
+                        </p>
+                    </div>
                 )}
             </div>
         </div>
