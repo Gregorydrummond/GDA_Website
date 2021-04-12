@@ -35,6 +35,9 @@ const NavBar = () => {
                         <Nav.Link href="/contact">Resources</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
+                        <Nav.Link href="/upload">Upload</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
                         <Nav.Link href="/profile">Profile</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
