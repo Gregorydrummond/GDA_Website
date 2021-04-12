@@ -17,12 +17,7 @@ mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: tr
 
 mongoose.set('useFindAndModify', false);
 
+
 app.use('/', router);
 
-
-//require router
-
-// app.listen(5000, function () {
-//     console.log(`Server is running on port ${PORT}`);
-// })
 
