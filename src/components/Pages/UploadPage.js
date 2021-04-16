@@ -7,20 +7,23 @@ const Upload = () => {
     //File State
     var selectedFile;
 
-    // On file select (from the pop up)
-    function onFileChange(event) {
-        //Update the state
-        //console.log(event.target.files[0]);
-        selectedFile = event.target.files[0];
-        //console.log(selectedFile);
-    };
-
     //Input State
     const [input, setInput] = useState({
         gameName: "",
-        gameDescription: ""
-        //selectedFile: File
+        gameDescription: "",
+        //selectedFile: null
     })
+    const [file, setFile] = useState('');
+    const [fileName, setFileName] = useState('');
+
+    // On file select (from the pop up)
+    const onFileChange = event => {
+        //Update the state
+        //console.log(event.target.files[0]);
+        // selectedFile = event.target.files[0];
+        setFile(event.target.files[0]);
+        //setFileName(event.target.files[0].name);
+    };
 
     //User inputs information
     function handleChange(event) {
@@ -39,12 +42,12 @@ const Upload = () => {
         
         console.log(input);
         // Details of the uploaded file
-        console.log(selectedFile)
+        console.log(file)
 
         const newGame = {
             title: input.gameName,
             gameDescription: input.gameDescription,
-            file: selectedFile
+            file: file
         }
 
         axios.post('http://localhost:5000/info', newGame);
@@ -67,7 +70,7 @@ const Upload = () => {
                 <div className="mb-3">
                     <Form.File id="formcheck-api-regular">
                     <Form.File.Label>Upload Game Here</Form.File.Label>
-                    <Form.File.Input type="file" name="selectedFile" value={input.selectedFile} onChange={onFileChange}/>
+                    <Form.File.Input type="hidden" name="selectedFile" value={input.selectedFile} onChange={onFileChange}/>
                     </Form.File>
                 </div>
                 <Button variant="primary" type="submit" onClick={handleClick}>
