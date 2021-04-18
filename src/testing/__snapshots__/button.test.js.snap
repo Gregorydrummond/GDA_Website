@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttons Renders Play Button Correctly 1`] = `
+<button
+  className="btn btn-primary"
+  disabled={false}
+  type="button"
+>
+  Play
+</button>
+`;

@@ -45,7 +45,7 @@ const GamePage = () => {
                         <p className="gameDescription">
                             
                             {info.gameDescription}
-                            <div>
+                            <div data-testid="button">
                                 <Button className="playButton" href="/gameViewPage" variant="primary">Play</Button>
                             </div>
                         </p>
