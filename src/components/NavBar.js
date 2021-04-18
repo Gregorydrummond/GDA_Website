@@ -1,7 +1,7 @@
 import { Nav, Navbar} from 'react-bootstrap'
 import { BsPeopleCircle } from 'react-icons/bs'
 import "../css/NavBar.css"
-var logo = require('../images/gameController.png')
+var logo = require('../images/GDA_Logo_Transparent.png')
 
 const NavBar = () => {
     console.log(logo)
@@ -18,7 +18,7 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Item>
-                        <Nav.Link href="/">GDA</Nav.Link>
+                        <Nav.Link href="/"><h1>GDA</h1></Nav.Link>
                     </Nav.Item>
                 </Nav>
                 <Nav className="navbar-nav ml-auto">

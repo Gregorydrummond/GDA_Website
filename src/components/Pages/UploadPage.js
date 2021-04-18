@@ -51,15 +51,30 @@ const Upload = () => {
         }
 
         axios.post('http://localhost:5000/info', newGame);
+
+        document.getElementById('gameName').value='';
+        document.getElementById('gameDescription').value='';
+
     }
 
     return (
         <div>
             <h2>Upload Games!</h2>
-            <Form>
+            <form onSubmit={handleClick}>
+                <br/>
+                <div class="form-group">
+                    <label for="gameName"><h5>Game Name</h5></label>
+                    <input class="form-control" type="text" id="gameName" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name" required/><br/><br/>
+                    <label for="lname"><h5>Game Description</h5></label><br/>
+                    <textarea class="form-control" type="text" id="gameDescription" name="gameDescription" value={input.gameDescription} onChange={handleChange} placeholder="Tell us about your game" required/><br/><br/>
+                    {/* <input type="submit" value="Upload" onClick={handleClick} /> */}
+                    <input type='submit' value='Upload'></input>
+                </div>
+            </form>
+            {/* <Form hasValidation>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Game Name</Form.Label>
-                    <Form.Control type="text" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name"/>
+                    <Form.Control type="text" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name" required hasValidation/>
                 </Form.Group>
 
                 <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -76,7 +91,7 @@ const Upload = () => {
                 <Button variant="primary" type="submit" onClick={handleClick}>
                     Upload
                 </Button>
-            </Form>
+            </Form> */}
         </div>
     )
 }
