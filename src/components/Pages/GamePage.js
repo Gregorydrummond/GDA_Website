@@ -9,6 +9,7 @@ const GamePage = () => {
     const [gameInfo, setGameInfo] = useState([{
         title: '',
         gameDescription: '',
+        _id: '',
         file: null
     }]);
 
