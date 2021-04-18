@@ -18,7 +18,7 @@ const NavBar = () => {
                 </Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Item>
-                        <Nav.Link href="/"><h1>GDA</h1></Nav.Link>
+                        <Nav.Link href="/"><h3>Game Developers Association</h3></Nav.Link>
                     </Nav.Item>
                 </Nav>
                 <Nav className="navbar-nav ml-auto">
