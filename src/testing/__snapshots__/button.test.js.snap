@@ -1,11 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Buttons Renders Play Button Correctly 1`] = `
+exports[`Buttons Renders All Games Button Correctly 1`] = `
+<button
+  className="btn btn-primary"
+  disabled={false}
+  type="button"
+>
+  All Games
+</button>
+`;
+
+exports[`Buttons Renders Play Buttons Correctly 1`] = `
 <button
   className="btn btn-primary"
   disabled={false}
   type="button"
 >
   Play
+</button>
+`;
+
+exports[`Buttons Renders Upload Button Correctly 1`] = `
+<button
+  className="btn btn-primary"
+  disabled={false}
+  type="button"
+>
+  Upload
 </button>
 `;
