@@ -28,11 +28,12 @@ const GamePage = () => {
 
     return (
         <div className="gamePageBody">
-            <h1 className="title">Games</h1>
+            <style> {"body{background-color: MediumSeaGreen}"}</style>
+            <h1 className="title" style={{textDecoration:"underline"}}>Games</h1>
             <div className="">
                 <form>
-                <label for="gsearch">Search Games:</label>
-                <input className="search"/>
+                    <label for="gsearch">Search Games:</label>
+                    <input className="search" />
                 </form>
             </div>
             <div className="gameCardContainer">
@@ -41,9 +42,9 @@ const GamePage = () => {
                         <div className="gameTitle">
                             {info.title}
                         </div>
-                        <img className="gameImage" src={gameCardImageEx1.default} alt="Game"/>
+                        <img className="gameImage" src={gameCardImageEx1.default} alt="Game" />
                         <p className="gameDescription">
-                            
+
                             {info.gameDescription}
                             <div>
                                 <Button className="playButton" href="/gameViewPage" variant="primary">Play</Button>

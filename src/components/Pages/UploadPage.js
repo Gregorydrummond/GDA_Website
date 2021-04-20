@@ -27,9 +27,9 @@ const Upload = () => {
 
     //User inputs information
     function handleChange(event) {
-        const {name, value} = event.target;
+        const { name, value } = event.target;
         setInput(prevInput => {
-            return{
+            return {
                 ...prevInput,
                 [name]: value
             }
@@ -39,7 +39,7 @@ const Upload = () => {
     //Press submit button
     function handleClick(event) {
         event.preventDefault();
-        
+
         console.log(input);
         // Details of the uploaded file
         console.log(file)
