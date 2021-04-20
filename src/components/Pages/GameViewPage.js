@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react'
+import axios from "axios"
 import Carousel from 'react-bootstrap/Carousel'
 import Container from 'react-bootstrap/Container'
 import { Link } from 'react-router-dom'
@@ -9,13 +11,43 @@ var gameCardImageEx2 = require('../../images/gameCardImageEx2.jpeg')
 var placeholder = require('../../images/placeholder.png')
 
 
-const GameView = () => {
+const GameView = ({id}) => {
+    // var idx = document.URL.indexOf('=');
+    // var data;
+    // var description;
+    // const [gameInfo, setGameInfo] = useState({
+    //     title: '',
+    //     gameDescription: '',
+    //     _id: '',
+    //     file: null
+    // });
+
+    // useEffect(async () => {
+    //     await axios
+    //         .get("http://localhost:5000/info")
+    //         .then(res => {
+    //             data = res.data.filter(game => game._id == document.URL.slice(idx+1))
+    //         })
+    //         .catch(e => console.log(e))
+    //         .then(setGameInfo(data))
+    //         .catch(error => console.log(error));
+
+        
+    //     console.log(data[0]);
+    // });
+
+    // function handleClick() {
+    //     console.log(gameInfo);
+    // }
+
+    
+
     return (
         <div className="gameViewPage">
             <div className="imageBannerContainer">
                 <img src={gameBanner.default} alt="Game Banner" className="imageBanner"/>
                 <div className="bannerGameTitle">
-                    Example Game Title Placed Here
+                    Game Title
                 </div>
             </div>
             <div className="genreAndSemster">
@@ -91,7 +123,7 @@ const GameView = () => {
             </Container>
             <Container className="downloadButtonDiv">
                 <Link to='../../images/marioHD.jpeg' target="_blank" download>
-                    <button type="button" className="downloadButton">Download</button>
+                    <button type="button" className="downloadButton" >Download</button>
                 </Link>
             </Container>
         </div>
