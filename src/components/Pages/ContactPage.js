@@ -20,6 +20,10 @@ const ContactPage = () => {
                 </iframe>
             </div>
 
+            <div id = "adminInfo">
+            <h3>Admin Contact : uflgda@gmail.com</h3>
+            </div>
+
         </div>
 
     )
