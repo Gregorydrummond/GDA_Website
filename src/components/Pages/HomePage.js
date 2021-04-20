@@ -13,6 +13,7 @@ var placeholder = require('../../images/placeholder.png')
 
 const HomePage = () => {
     return (
+        <div className="homePage">
         <Container>
             <Container className="mt-5">
                 <Carousel className="carousel">
@@ -101,31 +102,31 @@ const HomePage = () => {
                     <Card className="newGameCard">
                         <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
                         <Card.Body>
-                        <Card.Title>Game title</Card.Title>
-                        <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
+                            <Card.Title>Game title</Card.Title>
+                            <Card.Text>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
                         </Card.Text>
-                        <Button variant="outline-primary">Play</Button>
+                            <Button variant="outline-primary">Play</Button>
                         </Card.Body>
                     </Card>
                     <Card className="newGameCard">
                         <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
                         <Card.Body>
-                        <Card.Title>Game title</Card.Title>
-                        <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
+                            <Card.Title>Game title</Card.Title>
+                            <Card.Text>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
                         </Card.Text>
-                        <Button variant="outline-primary">Play</Button>
+                            <Button variant="outline-primary">Play</Button>
                         </Card.Body>
                     </Card>
                     <Card className="newGameCard">
                         <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
                         <Card.Body>
-                        <Card.Title>Game title</Card.Title>
-                        <Card.Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
+                            <Card.Title>Game title</Card.Title>
+                            <Card.Text>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempor purus vel mollis porta. Suspendisse volutpat viverra consequat. Aenean sit amet ultricies lacus, sit amet finibus mi. Aenean mi ex.
                         </Card.Text>
-                        <Button variant="outline-primary">Play</Button>
+                            <Button variant="outline-primary">Play</Button>
                         </Card.Body>
                     </Card>
 
@@ -137,6 +138,7 @@ const HomePage = () => {
                 </a>
             </div>
         </Container>
+        </div>
     )
 }
 
