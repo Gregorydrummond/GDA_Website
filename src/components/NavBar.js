@@ -41,7 +41,7 @@ const NavBar = () => {
                         <Nav.Link href="/profile">Profile</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link href="/login">
+                        <Nav.Link href="http://localhost:4000/login">
                             <BsPeopleCircle />
                         </Nav.Link>
                     </Nav.Item>
