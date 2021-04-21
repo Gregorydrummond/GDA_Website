@@ -12,33 +12,33 @@ var placeholder = require('../../images/placeholder.png')
 
 
 const GameView = ({id}) => {
-    // var idx = document.URL.indexOf('=');
-    // var data;
-    // var description;
-    // const [gameInfo, setGameInfo] = useState({
-    //     title: '',
-    //     gameDescription: '',
-    //     _id: '',
-    //     file: null
-    // });
+    var idx = document.URL.indexOf('=');
+    var data;
+    var description;
+    const [gameInfo, setGameInfo] = useState({
+        title: '',
+        gameDescription: '',
+        _id: '',
+        gameLink: ''
+    });
 
-    // useEffect(async () => {
-    //     await axios
-    //         .get("http://localhost:5000/info")
-    //         .then(res => {
-    //             data = res.data.filter(game => game._id == document.URL.slice(idx+1))
-    //         })
-    //         .catch(e => console.log(e))
-    //         .then(setGameInfo(data))
-    //         .catch(error => console.log(error));
+    useEffect(async () => {
+        await axios
+            .get("http://localhost:5000/info")
+            .then(res => {
+                data = res.data.filter(game => game._id == document.URL.slice(idx+1))
+            })
+            .catch(e => console.log(e))
+            // .then(setGameInfo(data))
+            .catch(error => console.log(error));
 
-        
-    //     console.log(data[0]);
-    // });
+        setGameInfo(data[0])
+        console.log(data[0]);
+    }, [gameInfo]);
 
-    // function handleClick() {
-    //     console.log(gameInfo);
-    // }
+    function handleClick() {
+        console.log(gameInfo);
+    }
 
     
 
@@ -47,7 +47,7 @@ const GameView = ({id}) => {
             <div className="imageBannerContainer">
                 <img src={gameBanner.default} alt="Game Banner" className="imageBanner"/>
                 <div className="bannerGameTitle">
-                    Game Title
+                    {gameInfo.title}
                 </div>
             </div>
             <div className="genreAndSemster">
@@ -65,8 +65,7 @@ const GameView = ({id}) => {
                 <div className="gameViewDescription">
                     <h4>Game Description</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu convallis ligula. Sed hendrerit, magna vel vulputate ullamcorper, nibh nulla varius orci, sit amet placerat diam lorem eget tellus. 
-                        Fusce ullamcorper, sapien sed ultricies tristique, ipsum augue pellentesque purus, sit amet condimentum lacus magna a est. Phasellus ultricies risus metus, quis iaculis ex lobortis sit amet.
+                        {gameInfo.gameDescription}
                     </p>
                 </div>
                 <div className="gameViewDescription">
@@ -122,9 +121,9 @@ const GameView = ({id}) => {
                 </Carousel>
             </Container>
             <Container className="downloadButtonDiv">
-                <Link to='../../images/marioHD.jpeg' target="_blank" download>
-                    <button type="button" className="downloadButton" >Download</button>
-                </Link>
+                <a href={gameInfo.file} target="_blank">
+                    <button type="button" className="downloadButton">Download</button>
+                </a>
             </Container>
         </div>
     )

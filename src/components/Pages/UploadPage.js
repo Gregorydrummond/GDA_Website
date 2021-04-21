@@ -11,6 +11,7 @@ const Upload = () => {
     const [input, setInput] = useState({
         gameName: "",
         gameDescription: "",
+        file: "",
         //selectedFile: null
     })
     const [file, setFile] = useState('');
@@ -40,21 +41,23 @@ const Upload = () => {
     function handleClick(event) {
         event.preventDefault();
 
-        console.log(input);
+        //console.log(input);
         // Details of the uploaded file
-        console.log(file)
+        //console.log(file)
 
         const newGame = {
             title: input.gameName,
             gameDescription: input.gameDescription,
-            file: file
+            file: input.file
         }
 
         axios.post('http://localhost:5000/info', newGame);
 
         document.getElementById('gameName').value='';
         document.getElementById('gameDescription').value='';
+        document.getElementById('file').value='';
 
+        console.log(input.file);
     }
 
     return (
@@ -64,11 +67,14 @@ const Upload = () => {
                 <br/>
                 <div class="form-group">
                     <label for="gameName"><h5>Game Name</h5></label>
-                    <input class="form-control" type="text" id="gameName" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name" required/><br/><br/>
+                    <input class="form-control" type="text" id="gameName" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name" required/><br/>
                     <label for="lname"><h5>Game Description</h5></label><br/>
-                    <textarea class="form-control" type="text" id="gameDescription" name="gameDescription" value={input.gameDescription} onChange={handleChange} placeholder="Tell us about your game" required/><br/><br/>
+                    <textarea class="form-control" type="text" id="gameDescription" name="gameDescription" value={input.gameDescription} onChange={handleChange} placeholder="Tell us about your game" required/><br/>
                     {/* <input type="submit" value="Upload" onClick={handleClick} /> */}
+                    <label for="file"><h5>Link to Game</h5></label>
+                    <input class="form-control" type="text" id="file" name="file" value={input.file} onChange={handleChange} placeholder="Enter link to your game" required/><br/><br/>
                     <input type='submit' value='Upload'></input>
+
                 </div>
             </form>
             {/* <Form hasValidation>
