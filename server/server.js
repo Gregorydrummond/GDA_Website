@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 //Connect to mongoose
-const CONNECTION_URL = "mongodb+srv://admin:Password!@cluster0.5udid.mongodb.net/gdamembers?retryWrites=true&w=majority";
+const CONNECTION_URL = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
