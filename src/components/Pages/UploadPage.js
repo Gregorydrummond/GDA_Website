@@ -17,7 +17,6 @@ const Upload = () => {
         genre2: "",
         contributors: "",
         otherInfo: ""
-        //selectedFile: null
     })
     const [file, setFile] = useState('');
     const [fileName, setFileName] = useState('');
@@ -141,31 +140,8 @@ const Upload = () => {
                     <label for="otherInfo"><h5>Other Information</h5></label><br/>
                     <textarea class="form-control" type="text" id="otherInfo" name="otherInfo" value={input.otherInfo} onChange={handleChange} placeholder="Anything else we need to know?" required/><br/>
                     <input type='submit' value='Upload'></input>
-                    
-
                 </div>
             </form>
-            {/* <Form hasValidation>
-                <Form.Group controlId="formBasicEmail">
-                    <Form.Label>Game Name</Form.Label>
-                    <Form.Control type="text" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name" required hasValidation/>
-                </Form.Group>
-
-                <Form.Group controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Game Description</Form.Label>
-                    <Form.Control as="textarea" name="gameDescription" value={input.gameDescription} onChange={handleChange} placeholder="Tell us about your game" />
-                </Form.Group>
-
-                <div className="mb-3">
-                    <Form.File id="formcheck-api-regular">
-                    <Form.File.Label>Upload Game Here</Form.File.Label>
-                    <Form.File.Input type="hidden" name="selectedFile" value={input.selectedFile} onChange={onFileChange}/>
-                    </Form.File>
-                </div>
-                <Button variant="primary" type="submit" onClick={handleClick}>
-                    Upload
-                </Button>
-            </Form> */}
         </div>
     )
 }

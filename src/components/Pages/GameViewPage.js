@@ -76,14 +76,6 @@ const GameView = ({id}) => {
                         <p>
                             {gameInfo.contributors}
                         </p>
-                    {/* <ul className="names">
-                        <li>Name 1: Team Lead, Gameplay Programming</li>
-                        <li>Name 2: UI Design Programming</li>
-                        <li>Name 3: Enemy Model, 2D Art</li>
-                        <li>Name 4: Boss Character Model</li>
-                        <li>Name 5: Main Character Model</li>
-                        <li>Name 6: Level Designer</li>
-                    </ul> */}
                 </div>
                 <div className="gameViewDescription otherInfo">
                     <h5>Other Info</h5>
