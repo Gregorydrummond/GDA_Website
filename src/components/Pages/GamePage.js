@@ -25,7 +25,7 @@ const GamePage = () => {
             .get("https://gda-website.herokuapp.com/")
             .then(res => setGameInfo(res.data))
             .catch(error => console.log(error));
-    });
+    }, [gameInfo]);
 
     return (
         <div className="gamePageBody">
