@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react'
+import axios from "axios"
 import Carousel from 'react-bootstrap/Carousel'
 import Container from 'react-bootstrap/Container'
 import { Link } from 'react-router-dom'
@@ -9,49 +11,76 @@ var gameCardImageEx2 = require('../../images/gameCardImageEx2.jpeg')
 var placeholder = require('../../images/placeholder.png')
 
 
-const GameView = () => {
+const GameView = ({id}) => {
+    var idx = document.URL.indexOf('=');
+    var data;
+    var description;
+    const [gameInfo, setGameInfo] = useState({
+        _id: '',
+        title: '',
+        gameDescription: '',
+        file: "",
+        semester: "",
+        genre1: "",
+        genre2: "",
+        contributors: "",
+        otherInfo: ""
+    });
+
+    useEffect(async () => {
+        await axios
+            .get("http://localhost:5000/info")
+            .then(res => {
+                data = res.data.filter(game => game._id == document.URL.slice(idx+1))
+            })
+            .catch(e => console.log(e))
+            // .then(setGameInfo(data))
+            .catch(error => console.log(error));
+
+        setGameInfo(data[0])
+        console.log(data[0]);
+    }, [gameInfo]);
+
+    function handleClick() {
+        console.log(gameInfo);
+    }
+
     return (
         <div className="gameViewPage">
             <div className="imageBannerContainer">
                 <img src={gameBanner.default} alt="Game Banner" className="imageBanner"/>
                 <div className="bannerGameTitle">
-                    Example Game Title Placed Here
+                    {gameInfo.title}
                 </div>
             </div>
             <div className="genreAndSemster">
                 <div className="genre">
-                    Genre 1
+                    {gameInfo.genre1}
                 </div>
                 <div className="genre">
-                    Genre 2
+                    {gameInfo.genre2}
                 </div>
                 <div className="semester">
-                    Spring 2020
+                    {gameInfo.semester}
                 </div>
             </div>
             <div className="gameInfo">
                 <div className="gameViewDescription">
                     <h4>Game Description</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu convallis ligula. Sed hendrerit, magna vel vulputate ullamcorper, nibh nulla varius orci, sit amet placerat diam lorem eget tellus. 
-                        Fusce ullamcorper, sapien sed ultricies tristique, ipsum augue pellentesque purus, sit amet condimentum lacus magna a est. Phasellus ultricies risus metus, quis iaculis ex lobortis sit amet.
+                        {gameInfo.gameDescription}
                     </p>
                 </div>
                 <div className="gameViewDescription">
                     <h5>Contributors</h5>
-                    <ul className="names">
-                        <li>Name 1: Team Lead, Gameplay Programming</li>
-                        <li>Name 2: UI Design Programming</li>
-                        <li>Name 3: Enemy Model, 2D Art</li>
-                        <li>Name 4: Boss Character Model</li>
-                        <li>Name 5: Main Character Model</li>
-                        <li>Name 6: Level Designer</li>
-                    </ul>
+                        <p>
+                            {gameInfo.contributors}
+                        </p>
                 </div>
                 <div className="gameViewDescription otherInfo">
                     <h5>Other Info</h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec ante justo. Aliquam imperdiet non lacus rutrum eleifend. In pellentesque lacinia pellentesque. Duis auctor, sapien eget venenatis sodales, turpis diam placerat ipsum, a volutpat elit ante tristique arcu. Nam ultricies ipsum vitae risus luctus, eu faucibus felis ultrices. Donec eget.
+                        {gameInfo.otherInfo}
                     </p>
                 </div>    
             </div>
@@ -90,9 +119,9 @@ const GameView = () => {
                 </Carousel>
             </Container>
             <Container className="downloadButtonDiv">
-                <Link to='../../images/marioHD.jpeg' target="_blank" download>
+                <a href={gameInfo.file} target="_blank">
                     <button type="button" className="downloadButton">Download</button>
-                </Link>
+                </a>
             </Container>
         </div>
     )

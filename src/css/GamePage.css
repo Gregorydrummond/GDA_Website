@@ -38,5 +38,12 @@
     height: 170px;
     width: 190px;
     margin-bottom: 3%;
-    
+    margin-top: 3%;
+    margin-right: 3%;
+}
+
+.playButton {
+    margin-top: 5%;
+    display:block;
+
 }

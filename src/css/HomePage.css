@@ -1,5 +1,18 @@
+.homePage{
+    min-height: 100%;
+    background-image: url("../images/gdatiles.png");
+    background-size: cover;
+    background-position: center center;
+}
+
 .title {
     text-align: center;
+}
+
+.sectionTitle{
+    background-color: ghostwhite;
+    border-style: solid;
+    border-color: black;
 }
 
 .carousel {
@@ -15,8 +28,21 @@
 }
 
 .newGameCard {
-    height:max-content;
     box-shadow: -5px 1px 10px grey;
+}
+
+.GameButton {
+    position: absolute;
+    left: 43%;
+    bottom: 10px;
+    
+}
+
+.newGameButton {
+    position: absolute;
+    left: 40%;
+    bottom: 10px;
+    
 }
 
 .cardImage {
