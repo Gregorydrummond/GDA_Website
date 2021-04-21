@@ -22,7 +22,7 @@ const GamePage = () => {
         //     console.log(jsonRes)
         //     setGameInfo(jsonRes)});
         axios
-            .get("https://gda-website.herokuapp.com/")
+            .get("https://gda-website.herokuapp.com/info")
             .then(res => setGameInfo(res.data))
             .catch(error => console.log(error));
     });
@@ -38,7 +38,7 @@ const GamePage = () => {
                 </form>
             </div>
             <div className="gameCardContainer">
-                {gameInfo.info.map(info =>
+                {gameInfo.map(info =>
                     <div className="gameCard">
                         <div className="gameTitle">
                             {info.title}
