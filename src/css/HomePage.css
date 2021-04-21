@@ -28,8 +28,21 @@
 }
 
 .newGameCard {
-    height:max-content;
     box-shadow: -5px 1px 10px grey;
+}
+
+.GameButton {
+    position: absolute;
+    left: 43%;
+    bottom: 10px;
+    
+}
+
+.newGameButton {
+    position: absolute;
+    left: 40%;
+    bottom: 10px;
+    
 }
 
 .cardImage {
