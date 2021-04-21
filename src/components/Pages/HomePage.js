@@ -14,6 +14,7 @@ var placeholder = require('../../images/placeholder.png')
 const HomePage = () => {
     return (
         <div className="homePage">
+        <style>{"body{background-color: gainsboro}"}</style>
         <Container>
             <Container className="mt-5">
                 <Carousel className="carousel">
@@ -71,7 +72,7 @@ const HomePage = () => {
                 </Carousel>
             </Container>
             <div className="mt-5 title">
-                <h2>Featured Games</h2>
+                <h2 className="sectionTitle">Featured Games</h2>
                 <CardDeck className="pt-3">
                     <Card className="featuredGameCard">
                         <Card.Img className="cardImage" varient="top" src={gameCardImageEx1.default} />
@@ -97,7 +98,7 @@ const HomePage = () => {
                 </CardDeck>
             </div>
             <div className="mt-5 title">
-                <h2 className="mb-3 title">New Games</h2>
+                <h2 className="mb-3 sectionTitle">New Games</h2>
                 <CardDeck>
                     <Card className="newGameCard">
                         <Card.Img className="newGameCardImage" varient="top" src={placeholder.default} />
