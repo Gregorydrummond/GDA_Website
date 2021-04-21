@@ -25,7 +25,7 @@ const GamePage = () => {
             .get("https://gda-website.herokuapp.com/")
             .then(res => setGameInfo(res.data))
             .catch(error => console.log(error));
-    }, [gameInfo]);
+    });
 
     return (
         <div className="gamePageBody">
@@ -38,7 +38,7 @@ const GamePage = () => {
                 </form>
             </div>
             <div className="gameCardContainer">
-                {gameInfo.map(info =>
+                {gameInfo.info.map(info =>
                     <div className="gameCard">
                         <div className="gameTitle">
                             {info.title}
