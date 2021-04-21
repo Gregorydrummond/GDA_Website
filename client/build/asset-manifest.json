@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1b6d1fcd.chunk.css",
+    "main.js": "/static/js/main.dbe109fc.chunk.js",
+    "main.js.map": "/static/js/main.dbe109fc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7781681e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7781681e.js.map",
+    "static/css/2.13e25dc1.chunk.css": "/static/css/2.13e25dc1.chunk.css",
+    "static/js/2.9aa5aedb.chunk.js": "/static/js/2.9aa5aedb.chunk.js",
+    "static/js/2.9aa5aedb.chunk.js.map": "/static/js/2.9aa5aedb.chunk.js.map",
+    "static/js/3.8d8c318c.chunk.js": "/static/js/3.8d8c318c.chunk.js",
+    "static/js/3.8d8c318c.chunk.js.map": "/static/js/3.8d8c318c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.13e25dc1.chunk.css.map": "/static/css/2.13e25dc1.chunk.css.map",
+    "static/css/main.1b6d1fcd.chunk.css.map": "/static/css/main.1b6d1fcd.chunk.css.map",
+    "static/js/2.9aa5aedb.chunk.js.LICENSE.txt": "/static/js/2.9aa5aedb.chunk.js.LICENSE.txt",
+    "static/media/GDA_Logo_Transparent.png": "/static/media/GDA_Logo_Transparent.244b0686.png",
+    "static/media/gameBanner.jpeg": "/static/media/gameBanner.47e587db.jpeg",
+    "static/media/gameCardImageEx1.jpeg": "/static/media/gameCardImageEx1.010b70fb.jpeg",
+    "static/media/gameCardImageEx2.jpeg": "/static/media/gameCardImageEx2.5923a744.jpeg",
+    "static/media/gameDev.png": "/static/media/gameDev.f4f42f23.png",
+    "static/media/gameDev2.jpeg": "/static/media/gameDev2.7280fcc3.jpeg",
+    "static/media/HomePage.css": "/static/media/gdatiles.9155c294.png",
+    "static/media/loginBackground.jpeg": "/static/media/loginBackground.abb788ad.jpeg",
+    "static/media/marioHD.jpeg": "/static/media/marioHD.59ef561f.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7781681e.js",
+    "static/css/2.13e25dc1.chunk.css",
+    "static/js/2.9aa5aedb.chunk.js",
+    "static/css/main.1b6d1fcd.chunk.css",
+    "static/js/main.dbe109fc.chunk.js"
+  ]
+}
