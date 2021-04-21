@@ -29,7 +29,7 @@ const GameView = ({id}) => {
 
     useEffect(async () => {
         await axios
-            .get("http://localhost:5000/info")
+            .get("https://gda-website.herokuapp.com/info")
             .then(res => {
                 data = res.data.filter(game => game._id == document.URL.slice(idx+1))
             })

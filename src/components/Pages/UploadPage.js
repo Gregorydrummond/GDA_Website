@@ -61,7 +61,7 @@ const Upload = () => {
             otherInfo: input.otherInfo
         }
 
-        axios.post('http://localhost:5000/info', newGame);
+        axios.post('https://gda-website.herokuapp.com/info', newGame);
 
         document.getElementById('gameName').value='';
         document.getElementById('gameDescription').value='';

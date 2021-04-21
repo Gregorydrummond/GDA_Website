@@ -22,7 +22,7 @@ const GamePage = () => {
         //     console.log(jsonRes)
         //     setGameInfo(jsonRes)});
         axios
-            .get("http://localhost:5000/info")
+            .get("https://gda-website.herokuapp.com/info")
             .then(res => setGameInfo(res.data))
             .catch(error => console.log(error));
     });
