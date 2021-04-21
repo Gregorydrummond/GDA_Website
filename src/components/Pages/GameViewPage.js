@@ -16,10 +16,15 @@ const GameView = ({id}) => {
     var data;
     var description;
     const [gameInfo, setGameInfo] = useState({
+        _id: '',
         title: '',
         gameDescription: '',
-        _id: '',
-        gameLink: ''
+        file: "",
+        semester: "",
+        genre1: "",
+        genre2: "",
+        contributors: "",
+        otherInfo: ""
     });
 
     useEffect(async () => {
@@ -40,8 +45,6 @@ const GameView = ({id}) => {
         console.log(gameInfo);
     }
 
-    
-
     return (
         <div className="gameViewPage">
             <div className="imageBannerContainer">
@@ -52,13 +55,13 @@ const GameView = ({id}) => {
             </div>
             <div className="genreAndSemster">
                 <div className="genre">
-                    Genre 1
+                    {gameInfo.genre1}
                 </div>
                 <div className="genre">
-                    Genre 2
+                    {gameInfo.genre2}
                 </div>
                 <div className="semester">
-                    Spring 2020
+                    {gameInfo.semester}
                 </div>
             </div>
             <div className="gameInfo">
@@ -70,19 +73,22 @@ const GameView = ({id}) => {
                 </div>
                 <div className="gameViewDescription">
                     <h5>Contributors</h5>
-                    <ul className="names">
+                        <p>
+                            {gameInfo.contributors}
+                        </p>
+                    {/* <ul className="names">
                         <li>Name 1: Team Lead, Gameplay Programming</li>
                         <li>Name 2: UI Design Programming</li>
                         <li>Name 3: Enemy Model, 2D Art</li>
                         <li>Name 4: Boss Character Model</li>
                         <li>Name 5: Main Character Model</li>
                         <li>Name 6: Level Designer</li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className="gameViewDescription otherInfo">
                     <h5>Other Info</h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec ante justo. Aliquam imperdiet non lacus rutrum eleifend. In pellentesque lacinia pellentesque. Duis auctor, sapien eget venenatis sodales, turpis diam placerat ipsum, a volutpat elit ante tristique arcu. Nam ultricies ipsum vitae risus luctus, eu faucibus felis ultrices. Donec eget.
+                        {gameInfo.otherInfo}
                     </p>
                 </div>    
             </div>
