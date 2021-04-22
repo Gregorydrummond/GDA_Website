@@ -5,7 +5,12 @@ const {Schema} = mongoose;
 const gameinfoSchema = new Schema({
     title: String,
     gameDescription: String,
-    gameFile: Object
+    file: String,
+    semester: String,
+    genre1: String,
+    genre2: String,
+    contributors: String,
+    otherInfo: String
 });
 
 const GameInfo = mongoose.model('Info', gameinfoSchema);
