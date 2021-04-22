@@ -1,7 +1,9 @@
 import "../../css/GamePage.css"
 import React, { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 import axios from "axios"
+import { urlencoded } from "body-parser"
 var gameCardImageEx1 = require('../../images/gameCardImageEx1.jpeg')
 var placeholder = require('../../images/placeholder.png')
 
@@ -28,15 +30,16 @@ const GamePage = () => {
     });
 
     return (
-        <div className="gamePageBody">
-            <style> {"body{background-color: MediumSeaGreen}"}</style>
-            <h1 className="title" style={{textDecoration:"underline"}}>Games</h1>
-            <div className="">
+        <div className="gamePage">
+            <style>{"body{background-color: gainsboro}"}</style>
+            <Container>
+              <h1 className="gamePageTitle">Games</h1>
+              <div className="">
                 <form>
                     <label for="gsearch">Search Games:</label>
                     <input className="search" />
                 </form>
-            </div>
+              </div>
             <div className="gameCardContainer">
                 {gameInfo.map(info =>
                     <div className="gameCard">
@@ -49,11 +52,20 @@ const GamePage = () => {
                             {info.gameDescription}
                             <div data-testid="button">
                                 <Button className="playButton" href={`/gameViewPage?id=${info._id}`} variant="primary">Play</Button>
+
                             </div>
-                        </p>
-                    </div>
-                )}
-            </div>
+                            <img className="gameImage" src={gameCardImageEx1.default} alt="Game" />
+                            <p className="gameDescription">
+
+                                {info.gameDescription}
+                                <div data-testid="button">
+                                    <Button className="playButton" href="/gameViewPage" variant="primary">Play</Button>
+                                </div>
+                            </p>
+                        </div>
+                    )}
+                </div>
+            </Container>
         </div>
     )
 }
