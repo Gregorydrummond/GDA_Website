@@ -34,12 +34,6 @@ const GamePage = () => {
             <style>{"body{background-color: gainsboro}"}</style>
             <Container>
               <h1 className="gamePageTitle">Games</h1>
-              <div className="">
-                <form>
-                    <label for="gsearch">Search Games:</label>
-                    <input className="search" />
-                </form>
-              </div>
             <div className="gameCardContainer">
                 {gameInfo.map(info =>
                     <div className="gameCard">
@@ -48,20 +42,12 @@ const GamePage = () => {
                         </div>
                         <img className="gameImage" src={gameCardImageEx1.default} alt="Game" />
                         <p className="gameDescription">
-
                             {info.gameDescription}
+                        </p>
                             <div data-testid="button">
                                 <Button className="playButton" href={`/gameViewPage?id=${info._id}`} variant="primary">Play</Button>
 
                             </div>
-                            <img className="gameImage" src={gameCardImageEx1.default} alt="Game" />
-                            <p className="gameDescription">
-
-                                {info.gameDescription}
-                                <div data-testid="button">
-                                    <Button className="playButton" href="/gameViewPage" variant="primary">Play</Button>
-                                </div>
-                            </p>
                         </div>
                     )}
                 </div>
