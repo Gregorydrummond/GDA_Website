@@ -1,3 +1,16 @@
+.contactPage{
+    min-height: 100%;
+    background-image: url("../images/gdatiles.png");
+    background-size: cover;
+}
+
+#connectTitle{
+    text-align: center;
+    background-color: ghostwhite;
+    border-style: solid;
+    border-color: black; 
+}
+
 #discordLink{
     text-align: center;
     text-decoration: underline;

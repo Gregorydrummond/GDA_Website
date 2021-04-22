@@ -23,11 +23,9 @@ function App() {
             <Route path='/gameViewPage' component={GameViewPage} />
             <Route path='/events' component={EventPage} />
             <Route path='/profile' component={ProfilePage} />
+            <Route path='/games' component={GamePage} />
+            <Route path='/upload' component={UploadPage} />
             {/*<Route path='/login' component={LoginPage} />*/}
-            <Container>
-              <Route path='/games' component={GamePage} />
-              <Route path='/upload' component={UploadPage} />
-            </Container>
           </Switch>
         </Router>
     </div>

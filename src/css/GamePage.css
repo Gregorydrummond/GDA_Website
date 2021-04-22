@@ -1,3 +1,16 @@
+.gamePage{
+    min-height: 100%;
+    background-image: url("../images/gdatiles.png");
+    background-size: cover;
+}
+
+.gamePageTitle{
+    text-align: center;
+    background-color: ghostwhite;
+    border-style: solid;
+    border-color: black; 
+}
+
 .search {
     border-width: 1px;
     margin-left: 0.25%;

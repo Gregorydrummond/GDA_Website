@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import "../../css/UploadPage.css"
 
 const Upload = () => {
     //File State
@@ -52,21 +54,23 @@ const Upload = () => {
 
         axios.post('http://localhost:5000/info', newGame);
 
-        document.getElementById('gameName').value='';
-        document.getElementById('gameDescription').value='';
+        document.getElementById('gameName').value = '';
+        document.getElementById('gameDescription').value = '';
 
     }
 
     return (
-        <div>
-            <h2>Upload Games!</h2>
+        <div className="uploadPage">
+            <style>{"body{background-color: gainsboro}"}</style>
+            <Container>
+            <h1 id = "title">Upload Games!</h1>
             <form onSubmit={handleClick}>
-                <br/>
+                <br />
                 <div class="form-group">
                     <label for="gameName"><h5>Game Name</h5></label>
-                    <input class="form-control" type="text" id="gameName" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name" required/><br/><br/>
-                    <label for="lname"><h5>Game Description</h5></label><br/>
-                    <textarea class="form-control" type="text" id="gameDescription" name="gameDescription" value={input.gameDescription} onChange={handleChange} placeholder="Tell us about your game" required/><br/><br/>
+                    <input class="form-control" type="text" id="gameName" name="gameName" value={input.gameName} onChange={handleChange} placeholder="Enter game name" required /><br /><br />
+                    <label for="lname"><h5>Game Description</h5></label><br />
+                    <textarea class="form-control" type="text" id="gameDescription" name="gameDescription" value={input.gameDescription} onChange={handleChange} placeholder="Tell us about your game" required /><br /><br />
                     {/* <input type="submit" value="Upload" onClick={handleClick} /> */}
                     <input type='submit' value='Upload'></input>
                 </div>
@@ -92,6 +96,7 @@ const Upload = () => {
                     Upload
                 </Button>
             </Form> */}
+            </Container>
         </div>
     )
 }
