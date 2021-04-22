@@ -1,12 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
-jobs:
-  build:
-    executor:
-      name: node/default
-      tag: '10.4'
-    steps:
-      - checkout
-      - run: cd client
-      - run: npm run test
+workflows:
+  node-tests:
+    jobs:
+      - node/test
