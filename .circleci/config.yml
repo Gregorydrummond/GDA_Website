@@ -4,4 +4,6 @@ orbs:
 workflows:
   node-tests:
     jobs:
-      - node/test
+      steps:
+        - run: cd client
+        - run: npm run test
