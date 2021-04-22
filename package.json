@@ -4,7 +4,7 @@
   "description": "Our team, 5 Bit Bunch, were tasked to create a website for the Game Developers' Association. Our main tool for development was the MERN stack. The website allows users to upload and showcase their games on the GDA Website.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "react-scripts test",
     "start": "cd server && node App.js",
     "server": "cd server && node App.js",
     "client": "cd client && npm start",
